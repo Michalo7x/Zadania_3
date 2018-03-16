@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TextField fx:id="field" layoutX="155.0" layoutY="4.0" onAction="#licz" onKeyTyped="#licz" prefHeight="8.0" prefWidth="102.0" />
+      <Label fx:id="label" layoutX="155.0" layoutY="100.0" text="Label" />
+      <RadioButton fx:id="input_c" layoutX="10.0" layoutY="40.0" mnemonicParsing="false" onAction="#licz" selected="true" text="Celcius">
+         <toggleGroup>
+            <ToggleGroup fx:id="in" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="input_f" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#licz" text="Fahrenheit" toggleGroup="$in" />
+      <RadioButton fx:id="input_k" layoutX="10.0" layoutY="80.0" mnemonicParsing="false" onAction="#licz" text="Kelvin" toggleGroup="$in" />
+      <RadioButton fx:id="output_c" layoutX="300.0" layoutY="40.0" mnemonicParsing="false" onAction="#licz" selected="true" text="Celcius">
+         <toggleGroup>
+            <ToggleGroup fx:id="out" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="output_f" layoutX="300.0" layoutY="60.0" mnemonicParsing="false" onAction="#licz" text="Fahrenheit" toggleGroup="$out" />
+      <RadioButton fx:id="output_k" layoutX="300.0" layoutY="80.0" mnemonicParsing="false" onAction="#licz" text="Kelvin" toggleGroup="$out" />
+      <Label layoutX="110.0" layoutY="10.0" prefHeight="17.0" prefWidth="39.0" text="Input:" />
+      <Label layoutX="110.0" layoutY="100.0" text="Output:" />
+   </children>
+</Pane>
